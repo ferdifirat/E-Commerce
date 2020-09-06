@@ -6,6 +6,7 @@ import * as productActions from "../../redux/actions/productActions";
 import * as cartActions from "../../redux/actions/cartActions";
 import alertify from "alertifyjs";
 import {Link} from "react-router-dom";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 
 class ProductList extends Component {
 
@@ -51,7 +52,7 @@ class ProductList extends Component {
      <td>{product.quantityPerUnit}</td>
      <td>{product.unitsInStock}</td>
      <td>
-       <Button color="success" onClick={()=>this.addToCart(product)}>Ekle</Button>
+       <Button color="success" onClick={()=>this.addToCart(product)}><FontAwesomeIcon icon="plus"></FontAwesomeIcon></Button>
      </td>
      <td>
        <Button color="danger" onClick={()=>this.deleteProduct(product)}>Sil</Button>

@@ -24,7 +24,7 @@ class CartSummary extends Component {
   renderEmpty() {
     return (
       <NavItem>
-        <NavLink>Sepetiniz boş</NavLink>
+        <NavLink><FontAwesomeIcon icon="shopping-cart"></FontAwesomeIcon> Sepetiniz boş</NavLink>
       </NavItem>
     );
   }
@@ -32,7 +32,7 @@ class CartSummary extends Component {
     return (
       <UncontrolledDropdown nav inNavbar>
         <DropdownToggle nav caret>
-          Sepetiniz
+        <FontAwesomeIcon icon="cart-plus" size="lg" color="green"></FontAwesomeIcon> Sepetiniz
         </DropdownToggle>
         <DropdownMenu right>
           {this.props.cart.map((cartItem) => (
